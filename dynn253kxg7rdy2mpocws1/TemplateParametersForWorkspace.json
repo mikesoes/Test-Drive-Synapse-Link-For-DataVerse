@@ -5,6 +5,15 @@
 		"workspaceName": {
 			"value": "dynn253kxg7rdy2mpocws1"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://dynn253kxg7rdy2mpoc.dfs.core.windows.net"
+		},
 		"keyVaultLinkedservice_properties_typeProperties_baseUrl": {
 			"value": "@{concat('https://',linkedService().keyVaultName,'.vault.azure.net/')}"
 		}
