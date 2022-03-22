@@ -21,11 +21,11 @@
 						"type": "DataFlowReference",
 						"parameters": {
 							"ContainerName": {
-								"value": "'@{\"dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1\"}'",
+								"value": "'@{dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1}'",
 								"type": "Expression"
 							},
 							"TableName": {
-								"value": "'@{\"mytable\"}'",
+								"value": "'@{mytable}'",
 								"type": "Expression"
 							}
 						},
