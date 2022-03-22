@@ -1,0 +1,49 @@
+{
+	"name": "Copy Dataverse data from Azure Data Lake to Azure SQL",
+	"properties": {
+		"description": "After using Azure Synapse Link for Dataverse, use this template to copy the Dataverse data from Azure Data Lake to Azure SQL.",
+		"activities": [
+			{
+				"name": "Dataverse mapping to Azure SQL",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DataverseToAzureSQL",
+						"type": "DataFlowReference",
+						"parameters": {
+							"ContainerName": {
+								"value": "'@{dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1}'",
+								"type": "Expression"
+							},
+							"TableName": {
+								"value": "'@{mytable}'",
+								"type": "Expression"
+							}
+						},
+						"datasetParameters": {
+							"SQL": {
+								"SQLTableName": "\"SQL Table Name\""
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-09-18T04:58:41Z"
+	}
+}
