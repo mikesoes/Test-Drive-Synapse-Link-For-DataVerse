@@ -25,7 +25,7 @@
 						},
 						"datasetParameters": {
 							"SQL": {
-								"SQLTableName": "Account"
+								"SQLTableName": "Account2"
 							}
 						}
 					},
