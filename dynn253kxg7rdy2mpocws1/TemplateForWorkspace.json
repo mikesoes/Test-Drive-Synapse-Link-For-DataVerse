@@ -53,7 +53,7 @@
 								"type": "DataFlowReference",
 								"parameters": {
 									"ContainerName": {
-										"value": "'@{dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1}'",
+										"value": "'@{account}'",
 										"type": "Expression"
 									},
 									"TableName": {
@@ -85,7 +85,8 @@
 				"lastPublishTime": "2021-09-18T04:58:41Z"
 			},
 			"dependsOn": [
-				"[concat(variables('workspaceId'), '/dataflows/DataverseToAzureSQL')]"
+				"[concat(variables('workspaceId'), '/dataflows/DataverseToAzureSQL')]",
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -597,18 +598,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/dynn253kxg7rdy2mpocws1p1')]",
-			"type": "Microsoft.Synapse/workspaces/sqlPools",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"collation": "SQL_Latin1_General_CP1_CI_AS",
-				"maxSizeBytes": 263882790666240,
-				"annotations": []
-			},
-			"dependsOn": [],
-			"location": "westus"
-		},
-		{
 			"name": "[concat(parameters('workspaceName'), '/ws1sparkpool1')]",
 			"type": "Microsoft.Synapse/workspaces/bigDataPools",
 			"apiVersion": "2019-06-01-preview",
@@ -628,6 +617,18 @@
 				"sparkVersion": "2.4",
 				"isComputeIsolationEnabled": false,
 				"sessionLevelPackagesEnabled": false,
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "westus"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/dynn253kxg7rdy2mpocws1p1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"collation": "SQL_Latin1_General_CP1_CI_AS",
+				"maxSizeBytes": 263882790666240,
 				"annotations": []
 			},
 			"dependsOn": [],
