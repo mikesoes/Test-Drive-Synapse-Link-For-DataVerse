@@ -53,7 +53,10 @@
 								"type": "DataFlowReference",
 								"parameters": {
 									"ContainerName": "\"dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1\"",
-									"TableName": "\"mytable\""
+									"TableName": {
+										"value": "'@{\"account\"}'",
+										"type": "Expression"
+									}
 								},
 								"datasetParameters": {
 									"ADLS": {},
@@ -79,7 +82,8 @@
 				"lastPublishTime": "2021-09-18T04:58:41Z"
 			},
 			"dependsOn": [
-				"[concat(variables('workspaceId'), '/dataflows/DataverseToAzureSQL')]"
+				"[concat(variables('workspaceId'), '/dataflows/DataverseToAzureSQL')]",
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
