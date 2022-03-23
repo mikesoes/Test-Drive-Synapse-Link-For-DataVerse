@@ -19,16 +19,6 @@
 					"dataflow": {
 						"referenceName": "DataverseToAzureSQL",
 						"type": "DataFlowReference",
-						"parameters": {
-							"ContainerName": {
-								"value": "'@{account}'",
-								"type": "Expression"
-							},
-							"TableName": {
-								"value": "'@{mytable}'",
-								"type": "Expression"
-							}
-						},
 						"datasetParameters": {
 							"SQL": {
 								"SQLTableName": "\"SQL Table Name\""
