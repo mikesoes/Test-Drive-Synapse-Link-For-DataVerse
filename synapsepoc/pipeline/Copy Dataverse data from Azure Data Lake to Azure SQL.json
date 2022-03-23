@@ -20,11 +20,7 @@
 						"referenceName": "DataverseToAzureSQL",
 						"type": "DataFlowReference",
 						"parameters": {
-							"ContainerName": "\"dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1\"",
-							"TableName": {
-								"value": "'@{\"account\"}'",
-								"type": "Expression"
-							}
+							"ContainerName": "\"dataverse-salestrial-unq1cc8161bd798478faef1b51afa8f1\""
 						},
 						"datasetParameters": {
 							"SQL": {
