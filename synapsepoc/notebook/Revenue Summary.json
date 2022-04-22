@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "387ee129-2b3c-45e2-8dea-92c3e596ddd8"
+				"spark.autotune.trackingId": "654ca127-ed64-4248-94fc-2aed764627b4"
 			}
 		},
 		"metadata": {
@@ -31,10 +31,10 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/644bb777-9ebb-4e13-af05-60e200e624fb/resourceGroups/dyn/providers/Microsoft.Synapse/workspaces/dynn253kxg7rdy2mpocws1/bigDataPools/ws1sparkpool1",
+				"id": "/subscriptions/644bb777-9ebb-4e13-af05-60e200e624fb/resourceGroups/dynsales/providers/Microsoft.Synapse/workspaces/msogosved45en2iopocws1/bigDataPools/ws1sparkpool1",
 				"name": "ws1sparkpool1",
 				"type": "Spark",
-				"endpoint": "https://dynn253kxg7rdy2mpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
+				"endpoint": "https://msogosved45en2iopocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
@@ -83,7 +83,7 @@
 				},
 				"source": [
 					"%%sql\r\n",
-					"USE  dataverse_salestrial_unq1cc8161bd798478faef1b51afa8f1"
+					"USE  dataverse_salestrial_unq5741d31d2bec4ac78ebb48ab91350"
 				],
 				"execution_count": 1
 			},
